@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "git": {
+      "command": "powershell",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/mcp/git-server.ps1"]
+    }
+  }
+}
