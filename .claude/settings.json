@@ -1,7 +1,9 @@
 {
   "permissions": {
     "deny": [
-      "Read(./.claude/hooks/**)"
+      "Read(./.claude/hooks/**)",
+      "Read(.env)",
+      "Read(.env.*)"
     ]
   },
   "hooks": {
