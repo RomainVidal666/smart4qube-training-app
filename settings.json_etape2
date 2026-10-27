@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": ["Bash(git status)", "Bash(git diff:*)", "Bash(git add:*)", "Bash(git commit:*)", "Bash(git ci:*)", "Bash(git config:*)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-commit.sh" }
+        ]
+      }
+    ]
+  }
+}

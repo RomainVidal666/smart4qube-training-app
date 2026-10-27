@@ -1,18 +1,5 @@
-#!/bin/sh
-# Hook git commit-msg : refuse un commit sans numero d'issue (#123).
-# $1 = fichier contenant le message.
-
-# On ignore les lignes de commentaire du gabarit git ("# ..." ou "#" seul).
-msg=$(grep -v -e '^# ' -e '^#$' "$1")
-
-# Merges et reverts generes par git : laisses passer.
-case "$msg" in
-  Merge\ *|Revert\ *) exit 0 ;;
-esac
-
-if printf '%s\n' "$msg" | grep -Eq '#[0-9]+'; then
-  exit 0
+#!/usr/bin/env bash
+if ! grep -qE '#[0-9]+' "$1"; then
+  echo "Commit refusé : le message doit contenir un numéro d'issue (ex. #42)." >&2
+  exit 1
 fi
-
-echo "Commit refuse : le message doit contenir un numero d'issue (ex: #123)." >&2
-exit 1
