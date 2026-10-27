@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if ! grep -qE '#[0-9]+' "$1"; then
+  echo "Commit refusé : le message doit contenir un numéro d'issue (ex. #42)." >&2
+  exit 1
+fi

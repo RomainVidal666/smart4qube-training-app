@@ -144,8 +144,8 @@ describe('POST /issues/:projectId', () => {
     const req = freshRequest();
     const first = await req.post('/issues/acme-payments').send(NEW_VULNERABILITY);
     const second = await req.post('/issues/legacy-billing').send(NEW_VULNERABILITY);
-    expect(first.body.id).toBe('iss-020');
-    expect(second.body.id).toBe('iss-021');
+    expect(first.body.id).toBe('iss-021');
+    expect(second.body.id).toBe('iss-022');
   });
 
   it('creates a COMMENT with null severity and rule', async () => {

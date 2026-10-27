@@ -57,3 +57,8 @@ A project's file paths must match the `filePath` of its issues (repo-relative PO
 across `contracts/openapi.yaml`, `apps/api/src/types.ts` and `apps/web/src/domain/entities/Issue.ts`.
 Run `npm run contract:check` before and after touching any issue enum. Exit 0 means aligned only;
 it does not prove the API behaves per the contract (that is what `npm run test:api` is for).
+
+## Other
+
+- Don't read .env
+Les commits contiennent le numéro d'issues (ex. #12)

@@ -275,4 +275,18 @@ export const SEED_ISSUES: Issue[] = [
     createdAt: T,
     updatedAt: T,
   },
+  {
+    id: 'iss-020',
+    projectId: 'legacy-billing',
+    filePath: 'billing/invoice.py',
+    line: 4,
+    type: 'QUALITY_GATE_VIOLATION',
+    severity: 'MINOR',
+    status: 'OPEN',
+    rule: 'S1192',
+    message: 'FEE_RATE is a hard-coded float; money computations should use Decimal.',
+    author: null,
+    createdAt: T,
+    updatedAt: T,
+  },
 ];
