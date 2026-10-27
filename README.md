@@ -52,3 +52,4 @@ npm run contract:check
 Compares the issue enums in `contracts/openapi.yaml`, `apps/api/src/types.ts`
 and `apps/web/src/domain/entities/Issue.ts` (see
 `.claude/skills/issue-contract-checker/`).
+
