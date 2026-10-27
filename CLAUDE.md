@@ -58,5 +58,7 @@ across `contracts/openapi.yaml`, `apps/api/src/types.ts` and `apps/web/src/domai
 Run `npm run contract:check` before and after touching any issue enum. Exit 0 means aligned only;
 it does not prove the API behaves per the contract (that is what `npm run test:api` is for).
 
+## Other
 
+- Don't read .env
 Les commits contiennent le numéro d'issues (ex. #12)
