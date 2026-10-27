@@ -1,13 +1,17 @@
 name: issue-number
-on: pull_request
+
+on:
+  pull_request
 
 jobs:
   commits:
+    name: commits
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Vérifier les numéros d'issue
         env:
           BASE: ${{ github.event.pull_request.base.sha }}
